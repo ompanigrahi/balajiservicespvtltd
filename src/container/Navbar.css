@@ -1,0 +1,22 @@
+.navbar{
+    height: 85px;
+    background-color: rgb(94, 201, 137);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+}
+
+.nav-left{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.nav-right{
+    color: white;
+    display: flex;
+    font-size: 3vh;
+    justify-content: flex-start;
+    gap: 40px;
+}
