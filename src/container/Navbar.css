@@ -1,11 +1,11 @@
 .navbar{
     height: 85px;
-    background-color: rgb(94, 201, 137);
+    background-color: #348758;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 10vw;
+    padding: 0 2vw;
 }
 
 .nav-left{
@@ -16,7 +16,20 @@
 .nav-right{
     color: white;
     display: flex;
-    font-size: 3vh;
+    font-size: 2.5vh;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 50px;
+}
+
+.navbar button{
+    background-color: #4fb2d5;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.navbar button:hover{
+    background-color: rgb(108, 204, 201);
+    color: azure;
 }
