@@ -1,6 +1,6 @@
 .navbar{
     height: 85px;
-    background-color: #348758;
+    background: linear-gradient(to right,black,rgb(68, 64, 64));
     position: relative;
     display: flex;
     justify-content: space-around;
