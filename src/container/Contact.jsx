@@ -1,112 +1,153 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Contact.css"; // Import external CSS file
 
 const ContactUs = () => {
-  return (
-    <div className="overflow-hidden">
-      <div className="flex flex-col min-h-screen bg-green-100">
-        <div className="flex-grow p-8">
-          {/* Page Title */}
-          <h2 className="text-center text-4xl font-extrabold text-gray-700 mb-8">
-            CONTACT US
-          </h2>
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "",
+    address: "",
+  });
 
-          {/* 4-Grid Layout */}
-          <div className="grid grid-cols-2 grid-rows-2 gap-6 h-[70vh]">
-            {/* Top Left - Phone & Email */}
-            <div className="p-6 flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-gray-700 mb-4">
-                Phone No.
-              </h3>
-              <p className="text-xl text-gray-600 mb-2">📞 98474 67833</p>
-              {/* <p className="text-xl text-gray-600 mb-4">💬 33333 44444</p> */}
-              <h3 className="text-2xl font-bold text-gray-700 mb-2">Email:</h3>
-              <p className="text-xl text-gray-600">📧 amarmanna867@gmail.com</p>
+  // Handle input change
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      let response = await fetch("http://localhost:5000/send-message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      let result = await response.json();
+
+      if (result.success) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", phone: "", service: "", address: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error sending message.");
+    }
+  };
+
+  return (
+    <div className="contact-container">
+      <div className="contact-page">
+        <div className="contact-content">
+          <h2 className="page-title">CONTACT US</h2>
+
+          <div className="contact-grid">
+            {/* Contact Info */}
+            <div className="contact-info">
+              <h3>Phone No.</h3>
+              <p>📞 98474 67833</p>
+              <h3>Email:</h3>
+              <p>📧 amarmanna867@gmail.com</p>
             </div>
 
-            {/* Top Right - Contact Form */}
-            <div className="p-6 flex flex-col justify-center">
-              <form className="w-4/5 mx-auto bg-opacity-0">
-                <div className="mb-4">
-                  <label className="block text-gray-700 font-semibold">
-                    Your Name:
-                  </label>
+            {/* Contact Form */}
+            <div className="contact-form">
+              <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label>Your Name:</label>
                   <input
                     type="text"
-                    className="w-full p-2 border rounded bg-transparent"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Enter your name"
                     required
                   />
                 </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 font-semibold">
-                    Phone No.:
-                  </label>
+                <div className="form-group">
+                  <label>Phone No.:</label>
                   <input
                     type="tel"
-                    className="w-full p-2 border rounded bg-transparent"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Enter phone number"
                     required
                   />
                 </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 font-semibold">
-                    Services Chosen:
-                  </label>
+                <div className="form-group">
+                  <label>Services Chosen:</label>
                   <select
-                    className="w-full p-2 border rounded bg-transparent"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
                     required
                   >
                     <option value="">Select a service</option>
-                    <option value="service1">Service 1</option>
-                    <option value="service2">Service 2</option>
+                    <option value="Tree Cutting">Tree Cutting</option>
+                    <option value="House Colouring">House Colouring</option>
+                    <option value="Garden Maintenance">
+                      Garden Maintenance
+                    </option>
+                    <option value="House Keeping">House Keeping</option>
+                    <option value="Plot Cleaning">Plot Cleaning</option>
+                    <option value="Tree/Plant Trimming">
+                      Tree/Plant Trimming
+                    </option>
                   </select>
                 </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 font-semibold">
-                    Address:
-                  </label>
+                <div className="form-group">
+                  <label>Address:</label>
                   <input
                     type="text"
-                    className="w-full p-2 border rounded bg-transparent"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
                     placeholder="Enter address"
                     required
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="bg-green-600 text-white px-4 py-2 rounded w-full"
-                >
+                <button type="submit" className="submit-btn">
                   Submit
                 </button>
               </form>
             </div>
 
-            {/* Bottom Left - Map */}
-            <div className="p-6 flex items-center justify-center">
+            {/* Google Map */}
+            <div className="contact-map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1057.2784805339643!2d76.32201937386047!3d9.952206800927343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwNTcnMDcuNCJOIDc2wrAxOScxOS43IkU!5e1!3m2!1sen!2sin!4v1738256481507!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                className="border-2 rounded-lg"
+                width="80%"
+                height="250"
+                className="map-iframe"
                 allowFullScreen=""
                 loading="lazy"
               ></iframe>
             </div>
 
-            {/* Bottom Right - Address */}
-            <div className="p-6 flex items-center justify-end">
-              <div className="text-xl font-semibold text-gray-700 text-right">
-                <p>ABC,</p>
-                <p>DEF,</p>
-                <p>7468254</p>
-              </div>
+            {/* Address */}
+            <div className="contact-address">
+              <p>
+                Balaji Services
+                <br />
+                Near EVM Volkswagen <br />
+                Cochin
+                <br />
+                682304
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Full-width Sticky Footer */}
-        <footer className="w-full bg-gray-800 text-white py-4 text-center fixed bottom-0 left-0">
-          <div className="flex justify-between px-8">
+        {/* Footer */}
+        <footer className="contact-footer">
+          <div>
             <span>© Copyright Reserved</span>
             <span>Designed by dhanazaweb</span>
           </div>
