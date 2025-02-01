@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import Foter from "../components/footer";
 
 const About = () => {
   return (
@@ -26,8 +27,7 @@ const About = () => {
       </div>
       {/* Footer */}
       <footer className="about-footer">
-        <span>© Copyright Reserved</span>
-        <span>Designed by dhanazaweb</span>
+      <Foter />
       </footer>
     </div>
   );

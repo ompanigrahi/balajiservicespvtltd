@@ -11,10 +11,10 @@ function Navbar() {
 <Link to="/"><img src="/images/logo.png" alt="" /></Link>
         </div>
         <div className="nav-right">
-          <Link to="/">Home</Link>
-          <Link to="/service">Service</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link className="hover:text-[#2fe29e] transition duration-150" to="/">Home</Link>
+          <Link className="hover:text-[#2fe29e] transition duration-150"  to="/service">Service</Link>
+          <Link className="hover:text-[#2fe29e] transition duration-150" to="/about">About</Link>
+          <Link className="hover:text-[#2fe29e] transition duration-150" to="/contact">Contact</Link>
         </div>
       </nav>
     </>

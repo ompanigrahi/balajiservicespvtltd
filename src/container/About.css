@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   /* Full-Page Container */
   .about-container {
     display: flex;
@@ -14,7 +14,7 @@
     background-color: #d4edc9; /* Light green background */
     text-align: center;
   }
-  
+
   /* Title Styling */
   .about-title {
     font-size: 3rem;
@@ -22,7 +22,7 @@
     padding: 30px 0;
     color: #2f4f2f;
   }
-  
+
   /* Content Layout */
   .about-content {
     display: flex;
@@ -32,7 +32,7 @@
     padding: 20px;
     gap: 50px;
   }
-  
+
   /* Image Styling */
   .about-image {
     max-width: 45%;
@@ -40,7 +40,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* Text Section */
   .about-text {
     max-width: 45%;
@@ -48,30 +48,16 @@
     font-size: 1.5rem;
     color: #2f4f2f;
   }
-  
+
   .about-text h3 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+
   .about-text p {
     font-size: 1.2rem;
     line-height: 1.8;
   }
-  
-  /* Footer Styling */
-  .about-footer {
-    background-color: #2f4f2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-  }
-  
+
+

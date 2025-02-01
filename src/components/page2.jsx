@@ -1,156 +1,98 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./page2.css";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Controller, Scrollbar } from "swiper/modules";
-// import { useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function page2() {
-  //   const [firstSwiper, setFirstSwiper] = useState(null);
-  //   const [secondSwiper, setSecondSwiper] = useState(null);
+gsap.registerPlugin(ScrollTrigger);
+
+const services = [
+  {
+    image: "/images/garden1.png",
+    title: "Garden Maintenance",
+    description:
+      "We provide top-notch garden maintenance to keep your outdoor space beautiful and healthy.",
+  },
+  {
+    image: "/images/garden2.png",
+    title: "Lawn Care",
+    description:
+      "Our lawn care services ensure lush, green, and well-maintained grass throughout the year.",
+  },
+  {
+    image: "/images/garden3.png",
+    title: "Planting & Landscaping",
+    description:
+      "Transform your garden with our expert planting and landscaping services.",
+  },
+  {
+    image: "/images/garden4.png",
+    title: "Irrigation Systems",
+    description:
+      "We install and maintain efficient irrigation systems to keep your plants hydrated.",
+  },
+  {
+    image: "/images/garden5.png",
+    title: "Tree Trimming",
+    description:
+      "Professional tree trimming services to enhance the beauty and health of your trees.",
+  },
+  {
+    image: "/images/garden6.png",
+    title: "Garden Design",
+    description:
+      "Create a stunning garden with our custom design services tailored to your preferences.",
+  },
+];
+
+function Page2() {
+  useEffect(() => {
+    gsap.utils.toArray(".section").forEach((section) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, scale: 0.8, y: 50 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 1,
+          ease: "linear",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 90%",
+            end: "top 40%", // Ends when it reaches closer to the top
+            scrub: 1,
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
-    <>
-      {/* <div className="page-2 h-screen w-full flex">
-        <div className="page-2-left h-screen w-1/2">
-          <Swiper
-            className="h-full w-full"
-            modules={[Autoplay, Controller]}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            spaceBetween={0}
-            slidesPerView={1}
-            onSwiper={setFirstSwiper}
-            controller={{ control: secondSwiper }}
-          >
-            <SwiperSlide>
-              <img
-                src="/images/HOUSEKEEPING2.png"
-                alt="Housekeeping"
-                className="w-full h-full object-cover"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="/images/planttrimming2.png"
-                alt="Plant Trimming"
-                className="w-full h-full object-cover"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="/images/planttrimming3.png"
-                alt="Plant Trimming 3"
-                className="w-full h-full object-cover"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="/images/garden2.png"
-                alt="Garden"
-                className="w-full h-full object-cover"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="/images/HP1.png"
-                alt="HP1"
-                className="w-full h-full object-cover"
-              />
-            </SwiperSlide>
-          </Swiper>
-        </div>
-        <div className="page-2-right h-screen w-1/2">
-          <Swiper
-            className="h-full w-full"
-            modules={[Autoplay, Controller]}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            spaceBetween={0}
-            slidesPerView={1}
-            onSwiper={setSecondSwiper} // Set second swiper instance
-            controller={{ control: firstSwiper }} // Link to first swiper
-          >
-            <SwiperSlide>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-              eius autem repudiandae et quis quibusdam delectus non aspernatur
-              nulla in.
-            </SwiperSlide>
-
-            <SwiperSlide>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum maxime dolor sit porro voluptas nesciunt neque incidunt
-              aliquam. Nobis, corrupti?
-            </SwiperSlide>
-
-            <SwiperSlide>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              recusandae ea, fuga molestias cumque hic maxime officiis facilis
-              repellat adipisci.
-            </SwiperSlide>
-
-            <SwiperSlide>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde,
-              necessitatibus ipsam laborum quos exercitationem error fugiat
-              harum placeat perferendis dolor!
-            </SwiperSlide>
-
-            <SwiperSlide>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-              minima tempora sint rerum, nesciunt repellat! Tempora in magni
-              unde odit.
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </div> */}
-
-      <div className="service h-fit w-full flex flex-col gap-10">
-        <h1 className="text-3xl font-bold text-center p-5 uppercase">
-          We Offers
-        </h1>
-        <div className="h-[70vh] w-full bg-slate-200 flex">
-          <div className="h-full w-3/5 bg-slate-300 p-5">
+    <div className="service h-fit w-full flex flex-col gap-10 bg-[#aad5aa]">
+      <h1 className="text-7xl text-[#f3f6f3] font-bold text-center p-5 uppercase mt-20">our services</h1>
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={`section h-[70vh] w-full flex ${
+            index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+          }`}
+        >
+          <div className="h-full w-1/2 p-5">
             <img
-              src="/images/garden.jpg"
-              alt=""
+              src={service.image}
+              alt={service.title}
               className="w-full h-full rounded-md"
             />
           </div>
-          <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4">
-            <h2 className="text-5xl font-bold">
-                Garden Care
-            </h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos itaque omnis fugit incidunt veniam, ducimus mollitia distinctio neque illum numquam laborum excepturi atque aliquid quia reiciendis dolorum! Recusandae, nesciunt quia.
-            </p>
+          <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4 items-center mt-20">
+            <h2 className="text-7xl text-[#fefffe] font-bold text-center">{service.title}</h2>
+            <p className="text-center t-xl text-[#3e3c3c]">{service.description}</p>
           </div>
         </div>
-
-        <div className="h-[70vh] w-full bg-slate-200 flex">
-        <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4">
-            <h2 className="text-5xl font-bold">
-                Garden Care
-            </h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos itaque omnis fugit incidunt veniam, ducimus mollitia distinctio neque illum numquam laborum excepturi atque aliquid quia reiciendis dolorum! Recusandae, nesciunt quia.
-            </p>
-          </div>
-          <div className="h-full w-3/5 bg-slate-300 p-5">
-            <img
-              src="/images/garden.jpg"
-              alt=""
-              className="w-full h-full rounded-md"
-            />
-          </div>
-        </div>
-
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
 
-export default page2;
+export default Page2;

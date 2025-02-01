@@ -119,8 +119,8 @@ function footer() {
         </div>
         <div className="foter-buttom text-white flex justify-center items-center ">
           <h3 className="mt-6">
-            Copyright ©2025 All rights reserved | This template is made with by
-            Colorlib
+            Copyright ©2025 All rights reserved | This website is made by
+            dhanazaweb
           </h3>
         </div>
       </div>
