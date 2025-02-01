@@ -3,19 +3,19 @@
 .contact-container {
     overflow: hidden;
   }
-  
+
   .contact-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #d4edc9;
   }
-  
+
   .contact-content {
     flex-grow: 1;
     padding: 2rem;
   }
-  
+
   /* Page Title */
   .page-title {
     text-align: center;
@@ -24,7 +24,7 @@
     color: #4a5568;
     margin-bottom: 2rem;
   }
-  
+
   /* Grid Layout */
   .contact-grid {
     display: grid;
@@ -33,7 +33,7 @@
     gap: 1.5rem;
     height: 70vh;
   }
-  
+
   /* Contact Info */
   .contact-info {
     padding: 1.5rem;
@@ -41,20 +41,20 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .contact-info h3 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #4a5568;
     margin-bottom: 0.5rem;
   }
-  
+
   .contact-info p {
     font-size: 1.25rem;
     color: #718096;
     margin-bottom: 0.5rem;
   }
-  
+
   /* Contact Form */
   .contact-form {
     padding: 1.5rem;
@@ -62,22 +62,22 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   form {
     width: 80%;
     margin: auto;
   }
-  
+
   .form-group {
     margin-bottom: 1rem;
   }
-  
+
   .form-group label {
     display: block;
     font-weight: 600;
     color: #4a5568;
   }
-  
+
   .form-group input,
   .form-group select {
     width: 100%;
@@ -86,7 +86,7 @@
     border-radius: 5px;
     background-color: transparent;
   }
-  
+
   /* Submit Button */
   .submit-btn {
     background-color: #16a34a;
@@ -97,11 +97,11 @@
     cursor: pointer;
     border: none;
   }
-  
+
   .submit-btn:hover {
     background-color: #15803d;
   }
-  
+
   /* Map */
   .contact-map {
     padding: 1.5rem;
@@ -109,12 +109,12 @@
     align-items: left;
     justify-content: left;
   }
-  
+
   .map-iframe {
     border: 2px solid #e5e7eb;
     border-radius: 10px;
   }
-  
+
   /* Address */
   .contact-address {
     padding: 1.5rem;
@@ -126,7 +126,7 @@
     font-weight: 600;
     color: #4a5568;
   }
-  
+
   /* Footer */
   .contact-footer {
     width: 100%;
@@ -138,10 +138,9 @@
     bottom: 0;
     left: 0;
   }
-  
+
   .contact-footer div {
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
   }
-  

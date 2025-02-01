@@ -44,36 +44,36 @@ function footer() {
           </div>
 
           <div className="w-[17%] h-[80%] ml-10  text-white foter-card flex flex-col text-left py-[20px] ">
-            <h1 className="text-2xl mb-8 mt-2 font-[400] left-8">Services</h1>
+            <h1 className="text-2xl mb-6 mt-2 font-semibold">Services</h1>
             <ul className="flex flex-col justify-evenly gap-5 text-[18px]">
 
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
-                  <FaAngleRight />
+                  <FaAngleRight className="text-l"/>
                   <span>Garden Care</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
-                  <FaAngleRight />
+                  <FaAngleRight className="text-l"/>
                   <span>Lawn Mowing</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
-                  <FaAngleRight />
+                  <FaAngleRight className="text-l"/>
                   <span>Lawn Care</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
-                  <FaAngleRight />
+                  <FaAngleRight className="text-l"/>
                   <span>Gutter Cleaning</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
-                  <FaAngleRight />
+                  <FaAngleRight className="text-l"/>
                   <span>New Law Installation</span>
                 </Link>
               </li>
