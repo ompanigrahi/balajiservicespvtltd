@@ -9,6 +9,8 @@ const ContactUs = () => {
     address: "",
   });
 
+  const backendURL = process.env.REACT_APP_BACKEND_URL; // Use environment variable
+
   // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,7 +21,7 @@ const ContactUs = () => {
     e.preventDefault();
 
     try {
-      let response = await fetch("http://localhost:5000/send-message", {
+      let response = await fetch(`${backendURL}/send-message`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,14 +94,10 @@ const ContactUs = () => {
                     <option value="">Select a service</option>
                     <option value="Tree Cutting">Tree Cutting</option>
                     <option value="House Colouring">House Colouring</option>
-                    <option value="Garden Maintenance">
-                      Garden Maintenance
-                    </option>
+                    <option value="Garden Maintenance">Garden Maintenance</option>
                     <option value="House Keeping">House Keeping</option>
                     <option value="Plot Cleaning">Plot Cleaning</option>
-                    <option value="Tree/Plant Trimming">
-                      Tree/Plant Trimming
-                    </option>
+                    <option value="Tree/Plant Trimming">Tree/Plant Trimming</option>
                   </select>
                 </div>
                 <div className="form-group">
@@ -113,9 +111,7 @@ const ContactUs = () => {
                     required
                   />
                 </div>
-                <button type="submit" className="submit-btn">
-                  Submit
-                </button>
+                <button type="submit" className="submit-btn">Submit</button>
               </form>
             </div>
 
