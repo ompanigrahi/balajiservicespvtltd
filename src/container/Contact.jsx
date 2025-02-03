@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css"; // Import external CSS file
+import Foter from "../components/footer";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ const ContactUs = () => {
     address: "",
   });
 
-  const backendURL = process.env.REACT_APP_BACKEND_URL; // Use environment variable
+  const backendURL = import.meta.env.VITE_BACKEND_URL;
 
   // Handle input change
   const handleChange = (e) => {
