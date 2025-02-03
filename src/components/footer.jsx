@@ -16,11 +16,11 @@ function footer() {
         <div className="foter-top">
           <div className="w-[22%] h-[80%] flex flex-col text-left p-[20px] text-white">
             <Link to="/">
-              <h1 className="text-[30px] mb-8 font-extrabold uppercase leading-normal">
+              <h1 className="text-[30px] font-extrabold uppercase leading-normal">
                 BALAJI <span className="text-green-400">services</span>
               </h1>
             </Link>
-            <h3 className="text-[#c1bebe] text-[18px]">
+            <h3 className="text-[#c1bebe] mt-8 text-[18px]">
               Far far away, behind the word <br /> mountains, far from the{" "}
               <br /> countries Vokalia and <br /> Consonantia, there live the{" "}
               <br /> blind texts.
@@ -45,7 +45,7 @@ function footer() {
 
           <div className="w-[17%] h-[80%] ml-10  text-white foter-card flex flex-col text-left py-[20px] ">
             <h1 className="text-2xl mb-6 mt-2 font-semibold">Services</h1>
-            <ul className="flex flex-col justify-evenly gap-5 text-[18px]">
+            <ul className="flex flex-col justify-evenly gap-5 text-[18px] mt-4">
 
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
@@ -84,7 +84,7 @@ function footer() {
             <h1 className="text-2xl mb-6 mt-2 font-semibold">
               Contact Information
             </h1>
-            <ul className="space-y-5 text-[18px]">
+            <ul className="space-y-5 text-[18px] mt-4">
               <li className="flex items-top space-x-4">
                 <FaLocationDot className="txt-xl" />
                 <span className="text-[#d9d1d1]">
@@ -103,9 +103,9 @@ function footer() {
             </ul>
           </div>
 
-          <div className="w-[15%] h-[80%] text-white foter-card flex flex-col text-left py-5">
+          <div className="w-[16%] h-[80%] text-white foter-card flex flex-col text-left py-5">
             <h1 className="text-2xl font-semibold mb-6 mt-2">Business Hours</h1>
-            <h3 className="mb-3">
+            <h3 className="mb-3 mt-4">
               <span className="font-medium">Opening Days:</span>
             </h3>
             <p className="mb-3">Monday - Friday: 9 AM - 8 PM</p>

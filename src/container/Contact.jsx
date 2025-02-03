@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Contact.css"; // Import external CSS file
-import env from "react-dotenv";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +9,7 @@ const ContactUs = () => {
     address: "",
   });
 
-  // const backendURL = process.env.REACT_APP_BACKEND_URL; // Use environment variable
+  const backendURL = process.env.REACT_APP_BACKEND_URL; // Use environment variable
 
   // Handle input change
   const handleChange = (e) => {
@@ -45,6 +44,7 @@ const ContactUs = () => {
   };
 
   return (
+    <>
     <div className="contact-container">
       <div className="contact-page">
         <div className="contact-content">
@@ -142,15 +142,17 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="contact-footer">
+
+        {/* <footer className="contact-footer">
           <div>
             <span>© Copyright Reserved</span>
             <span>Designed by dhanazaweb</span>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </div>
+    <Foter />
+    </>
   );
 };
 
