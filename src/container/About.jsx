@@ -13,21 +13,13 @@ const About = () => {
         <div className="about-text">
           <h3>Hello Clients,</h3>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            At <strong className="text-green-800 underline" alt="">Balaji Services</strong>, we are committed to providing top-quality home and garden services to keep your surroundings clean, beautiful, and well-maintained. Our expert team specializes in tree cutting for safety and aesthetics, house coloring to refresh your home’s look, and housekeeping for a spotless living space. We also offer plot cleaning to clear debris, garden maintenance to nurture your greenery, and grass cutting for a well-manicured lawn. With a focus on professionalism, efficiency, and customer satisfaction, we ensure every service meets the highest standards, helping you create a clean, organized, and visually appealing environment.
           </p>
         </div>
       </div>
       {/* Footer */}
       <footer className="about-footer">
-      <Foter />
+        <Foter />
       </footer>
     </div>
   );

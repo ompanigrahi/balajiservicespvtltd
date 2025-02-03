@@ -50,31 +50,31 @@ function footer() {
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
                   <FaAngleRight className="text-l"/>
-                  <span>Garden Care</span>
+                  <span>Tree Cutting</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
                   <FaAngleRight className="text-l"/>
-                  <span>Lawn Mowing</span>
+                  <span>House Colouring</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
                   <FaAngleRight className="text-l"/>
-                  <span>Lawn Care</span>
+                  <span>House Keeping</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
                   <FaAngleRight className="text-l"/>
-                  <span>Gutter Cleaning</span>
+                  <span>Plot Cleaning</span>
                 </Link>
               </li>
               <li className="transition duration-200 hover:text-[#216721]">
                 <Link to="/" className="flex items-center space-x-2 leading-5">
                   <FaAngleRight className="text-l"/>
-                  <span>New Law Installation</span>
+                  <span>Garden Maintainence</span>
                 </Link>
               </li>
             </ul>
@@ -88,17 +88,17 @@ function footer() {
               <li className="flex items-top space-x-4">
                 <FaLocationDot className="txt-xl" />
                 <span className="text-[#d9d1d1]">
-                  203 Fake St. Mountain <br /> View, San Francisco,
-                  <br /> California, USA
+                  Vytila, Cochi <br /> Kerela, India,
+                  <br /> 682304
                 </span>
               </li>
               <li className="flex items-top space-x-4 transition duration-150 hover:text-[#216721]">
                 <IoCallSharp className="text-xl" />
-                <span>+91 1234567890</span>
+                <span>+91 9847467833</span>
               </li>
               <li className="flex items-center space-x-4 transition duration-150 hover:text-[#216721]">
                 <MdEmail className="text-xl" />
-                <span>infoyourdomain@gmail.com</span>
+                <span>amarmanna867@gmail.com</span>
               </li>
             </ul>
           </div>
