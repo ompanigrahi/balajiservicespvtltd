@@ -9,16 +9,25 @@ const Page3 = () => {
   const testimonials = [
     {
       name: "Rahul Yadav",
-      data: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur ratione explicabo quisquam omnis, dolores suscipit, ipsa culpa, aperiam doloremque excepturi facilis saepe esse exercitationem nihil tenetur sed quas deleniti maiores.",
+      data: "Our home got a complete makeover thanks to their expert painting services! The colors are vibrant, and the finish is flawless. Highly professional and on time—highly recommended!"  
     },
     {
-      name: "Tushar Ranjan Sahu",
-      data: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur ratione explicabo quisquam omnis, dolores suscipit, ipsa culpa, aperiam doloremque excepturi facilis saepe esse exercitationem nihil tenetur sed quas deleniti maiores.",
+      name: "Priya Sharma",
+      data: "I wanted a beautiful garden but had no idea where to start. Their team transformed my backyard into a lush green paradise! Now, I love spending time outdoors." 
     },
     {
-      name: "Rohan Kumar Bag",
-      data: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur ratione explicabo quisquam omnis, dolores suscipit, ipsa culpa, aperiam doloremque excepturi facilis saepe esse exercitationem nihil tenetur sed quas deleniti maiores.",
+      name: "Ananya Rao",
+      data: "Keeping up with household chores was a nightmare, but their housekeeping service has been a game-changer! My home has never felt cleaner and fresher." 
     },
+    {
+      name: "Kunal Verma",
+      data: "From painting to gardening and even housekeeping, they took care of everything! Our home has never looked better. Professional, efficient, and worth every penny!" 
+    },
+    {
+      name: "Deepak Nair",
+      data: "We had an old tree that was becoming a safety hazard. Their team handled it professionally and safely, leaving our space neat and tidy. Great service!" 
+    },
+
   ];
 
   return (

@@ -21,10 +21,15 @@ function footer() {
               </h1>
             </Link>
             <h3 className="text-[#c1bebe] mt-8 text-[18px]">
-              Far far away, behind the word <br /> mountains, far from the{" "}
-              <br /> countries Vokalia and <br /> Consonantia, there live the{" "}
-              <br /> blind texts.
+            Deep in the heart of nature’s embrace, <br /> beyond the bustle of concrete trails,{" "}
+              <br /> where roots whisper and leaves dance, <br /> we nurture life, one tree at a time.{" "}
+              <br /> 
             </h3>
+
+            
+
+
+
 
             <div className="icons">
               <ul className="flex mt-14 gap-4">
