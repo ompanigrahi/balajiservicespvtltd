@@ -87,7 +87,6 @@
     background-color: transparent;
   }
 
-  /* Submit Button */
   .submit-btn {
     background-color: #16a34a;
     color: white;
@@ -102,7 +101,6 @@
     background-color: #15803d;
   }
 
-  /* Map */
   .contact-map {
     padding: 1.5rem;
     display: flex;
@@ -115,7 +113,6 @@
     border-radius: 10px;
   }
 
-  /* Address */
   .contact-address {
     padding: 1.5rem;
     display: flex;
@@ -127,20 +124,4 @@
     color: #4a5568;
   }
 
-  /* Footer */
-  .contact-footer {
-    width: 100%;
-    background-color: #2f4f2f;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-  }
 
-  .contact-footer div {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
-  }

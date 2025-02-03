@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import "./Service.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Foter from "../components/footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    image: "/images/tree-cutting-1.jpg",
+    image: "/images/tree-cutting-01.jpg",
     title: "Tree Cutting",
     description:
       "We provide top-notch garden maintenance to keep your outdoor space beautiful and healthy.",
@@ -69,7 +70,9 @@ function Service() {
   }, []);
 
   return (
-    <div className="service h-fit w-full flex flex-col gap-10 bg-[#aad5aa]">
+    <>
+
+<div className="service h-fit w-full flex flex-col gap-10 bg-[#aad5aa]">
       <h1 className="text-7xl text-[#f3f6f3] font-bold text-center p-5 uppercase mt-20">our services</h1>
       {services.map((service, index) => (
         <div
@@ -92,6 +95,8 @@ function Service() {
         </div>
       ))}
     </div>
+    <Foter/>
+    </>
   );
 }
 
