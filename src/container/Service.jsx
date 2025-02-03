@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import "./Service.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Foter from "../components/footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
+    image: "/images/tree-cutting-01.jpg",
     image: "/images/tree-cutting-01.jpg",
     title: "Tree Cutting",
     description:
@@ -69,41 +71,27 @@ function Service() {
   }, []);
 
   return (
-    <div className="service h-fit w-full flex flex-col gap-10 bg-[#aad5aa]">
-      <h1 className="text-7xl text-[#f3f6f3] font-bold text-center p-5 uppercase mt-20">
-        our services
-      </h1>
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={`section h-[70vh] w-full flex ${
-            index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-          }`}
-        >
-          <div className="h-full w-1/2 p-5">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-full rounded-md"
-            />
+    <>
+      <div
+        className="page1 flex  justify-center h-screen bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/garden-bg.jpg')" }}
+      >
+        <div ref={Left} className="page-left text-center p-10 rounded-lg mt-20">
+          <h1 className="text-10xl font-bold uppercase">
+            Balaji <br /> Services
+          </h1>
+          <h3 className="text-2xl mt-4">Five Star Garden Service Provider</h3>
+          <div className="">
+            <img src="/images/ratingstar.jpg" alt="Rating" className="mx-auto bg-center scale-150" />
           </div>
-          <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4 items-center mt-20">
-            <h2 className="text-7xl text-[#fefffe] font-bold text-center  decoration-2">
-              {service.title}
-            </h2>
-            <p className="text-center text-2xl text-[#3e3c3c]">
-              {service.description}
-            </p>
-          </div>
-
-          {/* <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4 items-center mt-20">
-            <h2 className="text-7xl text-[#fefffe] font-bold text-center">{service.title}</h2>
-            <p className="text-center t-xl text-[#3e3c3c]">{service.description}</p>
-          </div> */}
         </div>
-      ))}
-    </div>
+      </div>
+      <Page2 />
+      <Page3 />
+      <Foter />
+    </>
   );
-}
+};
+
 
 export default Service;

@@ -27,7 +27,7 @@ const Page3 = () => {
 
       <div className="relative w-1/2 mt-16">
         <Swiper
-          className="h-4/5 rounded-md"
+          className="h-4/5 rounded-md bg-[#7dae7d]"
           modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 3000,
@@ -41,7 +41,7 @@ const Page3 = () => {
           {testimonials.map((text, index) => (
             <SwiperSlide
               key={index}
-              className="flex flex-col justify-center items-center bg-[#7dae7d] rounded-md px-8 py-6 h-full text-center font-semibold text-white"
+              className="flex flex-col justify-center items-center rounded-md px-8 py-6 h-full text-center font-semibold text-white"
             >
               <p className="mb-4">"{text.data}"</p>
               <h2 className="text-3xl font-semibold">"{text.name}"</h2>
