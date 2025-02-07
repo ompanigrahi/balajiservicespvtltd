@@ -21,16 +21,10 @@ function footer() {
               </h1>
             </Link>
             <h3 className="text-[#c1bebe] mt-8 text-[18px]">
-            Deep in the heart of nature’s embrace, <br /> beyond the bustle of concrete trails,{" "}
-              <br /> where roots whisper and leaves dance, <br /> we nurture life, one tree at a time.{" "}
-              <br /> 
+            Deep in the heart of nature’s embrace,beyond the bustle of concrete trails,{" "}
+              <br /> where roots whisper and leaves dance, we nurture life, one tree at a time.{" "}
+              <br />
             </h3>
-
-            
-
-
-
-
             <div className="icons">
               <ul className="flex mt-14 gap-4">
                 <li className="h-12 w-12 bg-[#2a2929] rounded-full flex items-center justify-center hover:text-[#216721]">
@@ -80,6 +74,12 @@ function footer() {
                 <Link to="/" className="flex items-center space-x-2 leading-5">
                   <FaAngleRight className="text-l"/>
                   <span>Garden Maintainence</span>
+                </Link>
+              </li>
+              <li className="transition duration-200 hover:text-[#216721]">
+                <Link to="/" className="flex items-center space-x-2 leading-5">
+                  <FaAngleRight className="text-l"/>
+                  <span>Grass Cutting</span>
                 </Link>
               </li>
             </ul>

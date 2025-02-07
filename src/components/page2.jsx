@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     image: "/images/tree-cutting-01.jpg",
-  
+
     title: "Tree Cutting",
     description:
       "Our professional tree-cutting service ensures the safe and efficient removal of unwanted or overgrown trees. Whether you need trimming to maintain the health of your trees or complete removal to clear space, we use the latest equipment and techniques to handle the job with precision and care. Keep your property safe and enhance its natural beauty with our expert services.",
@@ -88,7 +88,7 @@ function Page2() {
               className="w-full h-full rounded-md"
             />
           </div>
-          <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4 items-center mt-20">
+          <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4 items-center mt-3">
             <h2 className="text-7xl text-[#fefffe] font-bold text-center  decoration-2">
               {service.title}
             </h2>
