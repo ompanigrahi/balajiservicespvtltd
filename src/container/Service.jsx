@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./Service.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Foter from "../components/footer";
@@ -45,8 +44,7 @@ const services = [
   },
 ];
 
-
-function Service() {
+function Page2() {
   useEffect(() => {
     gsap.utils.toArray(".section").forEach((section) => {
       gsap.fromTo(
@@ -61,7 +59,7 @@ function Service() {
           scrollTrigger: {
             trigger: section,
             start: "top 90%",
-            end: "top 40%", // Ends when it reaches closer to the top
+            end: "top 40%",
             scrub: 1,
             toggleActions: "play none none none",
           },
@@ -72,27 +70,27 @@ function Service() {
 
   return (
     <>
-    <div className="service h-fit w-full flex flex-col gap-10 bg-[#aad5aa]">
-      <h1 className="text-7xl text-[#f3f6f3] font-bold text-center p-5 uppercase mt-20">our services</h1>
+    <div className="min-h-screen w-full flex flex-col gap-10 bg-green-200">
+      <h1 className="text-4xl md:text-5xl lg:text-7xl text-gray-100 font-bold text-center p-5 uppercase mt-20 drop-shadow-md">
+        Our Services
+      </h1>
       {services.map((service, index) => (
         <div
           key={index}
-          className={`section h-[70vh] w-full flex ${
-            index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-          }`}
+          className={`section flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center w-full`}
         >
-          <div className="h-full w-1/2 p-5">
+          <div className="w-full md:w-1/2 p-5">
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-full rounded-md"
+              className="w-full h-auto rounded-md shadow-lg"
             />
           </div>
-          <div className="py-5 w-2/5 overflow-hidden flex flex-col gap-4 items-center mt-20">
-            <h2 className="text-7xl text-[#fefffe] font-bold text-center  decoration-2">
+          <div className="w-full md:w-2/5 flex flex-col gap-4 items-center text-center px-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold drop-shadow-md">
               {service.title}
             </h2>
-            <p className="text-center text-2xl text-[#3e3c3c]">
+            <p className="text-lg md:text-xl text-gray-700">
               {service.description}
             </p>
           </div>
@@ -104,4 +102,4 @@ function Service() {
   );
 }
 
-export default Service;
+export default Page2;
