@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Foter from "../components/footer";
+import Footer from "../components/footer";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -9,34 +9,20 @@ const ContactUs = () => {
     address: "",
   });
 
-  const backendURL = import.meta.env.VITE_BACKEND_URL;
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      let response = await fetch(`${backendURL}/send-message`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      let result = await response.json();
-      if (result.success) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", phone: "", service: "", address: "" });
-      } else {
-        alert("Failed to send message.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Error sending message.");
-    }
+    console.log("Form Data:", formData); // Log form data to the console
+    
+    const staticPart = "https://wa.me/8455975766?text=";
+    const dynamicPart = `Name: ${formData.name} Phone No: ${formData.phone} Service Chosen: ${formData.service} Address: ${formData.address}`;
+    const url = `${staticPart}${encodeURIComponent(dynamicPart)}`;
+    
+    // Redirect to the constructed URL
+    window.open(url, "_blank");
   };
 
   return (
@@ -108,7 +94,7 @@ const ContactUs = () => {
           </p>
         </div>
       </div>
-      <Foter />
+      <Footer />
     </>
   );
 };
