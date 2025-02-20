@@ -45,59 +45,38 @@ const services = [
 ];
 
 function Page2() {
-  useEffect(() => {
-    gsap.utils.toArray(".section").forEach((section) => {
-      gsap.fromTo(
-        section,
-        { opacity: 0, scale: 0.8, y: 50 },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          duration: 1,
-          ease: "linear",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 90%",
-            end: "top 40%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-        }
-      );
-    });
-  }, []);
-
   return (
     <>
-    <div className="min-h-screen w-full flex flex-col gap-10 bg-green-200">
-      <h1 className="text-4xl md:text-5xl lg:text-7xl text-gray-100 font-bold text-center p-5 uppercase mt-20 drop-shadow-md">
-        Our Services
-      </h1>
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={`section flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center w-full`}
-        >
-          <div className="w-full md:w-1/2 p-5">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-auto rounded-md shadow-lg"
-            />
-          </div>
-          <div className="w-full md:w-2/5 flex flex-col gap-4 items-center text-center px-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold drop-shadow-md">
-              {service.title}
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700">
-              {service.description}
-            </p>
-          </div>
+      <div className="min-h-screen w-full flex flex-col bg-[#b9d9b9]">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl text-gray-100 font-bold text-center p-5 uppercase mt-24 drop-shadow-md">
+          Our Services
+        </h1>
+        <div className="card h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20 px-16 py-8 pb-20 place-items-center">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="relative h-[70vh] rounded-lg w-96 bg-white overflow-hidden group shadow-lg"
+            >
+
+              <img
+                src={service.image}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover z-0"
+              />
+              <div
+                className="absolute inset-0 bg-black/40 flex flex-col justify-start text-white z-9 px-6 hover:py-8 text-center
+                translate-y-[85%] group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h1 className="text-4xl font-bold">{service.title}</h1>
+                <p className="hidden group-hover:block text-sm mt-3 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-    <Foter />
+      </div>
+      <Foter />
     </>
   );
 }

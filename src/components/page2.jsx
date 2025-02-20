@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,14 +70,14 @@ function Page2() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex flex-col gap-10 bg-green-200">
+    <div className="min-h-screen w-full flex flex-col gap-10 bg-[#7d987d] pb-10">
       <h1 className="text-4xl md:text-5xl lg:text-7xl text-gray-100 font-bold text-center p-5 uppercase mt-20 drop-shadow-md">
         Our Services
       </h1>
       {services.map((service, index) => (
         <div
           key={index}
-          className={`section flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center w-full`}
+          className={`section flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} w-full`}
         >
           <div className="w-full md:w-1/2 p-5">
             <img
@@ -83,9 +85,41 @@ function Page2() {
               alt={service.title}
               className="w-full h-auto rounded-md shadow-lg"
             />
+            {/* <div className="h-full w-full">
+              <Swiper
+                className="h-full w-full"
+                modules={[Autoplay]}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                spaceBetween={0}
+                slidesPerView={1}
+              >
+                {[
+                  { src: "/images/HOUSEKEEPING2.png", alt: "Housekeeping" },
+                  { src: "/images/planttrimming2.png", alt: "Plant Trimming" },
+                  {
+                    src: "/images/planttrimming3.png",
+                    alt: "Plant Trimming 3",
+                  },
+                  { src: "/images/garden2.png", alt: "Garden" },
+                  { src: "/images/HP1.png", alt: "HP1" },
+                ].map((image, index) => (
+                  <SwiperSlide key={index} className="object-cover">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div> */}
           </div>
-          <div className="w-full md:w-2/5 flex flex-col gap-4 items-center text-center px-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold drop-shadow-md">
+          <div className="w-full md:w-2/5 flex flex-col gap-4 items-center text-center px-4 md:py-20">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl text-white font-bold drop-shadow-md">
               {service.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-700">

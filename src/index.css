@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    scroll-behavior: smooth;
 }
 
-html,body{
+html, body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }

@@ -41,7 +41,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-green-100 flex flex-col items-center py-10 px-5 md:px-20">
+      <div className="min-h-screen lg:mt-16 bg-green-100 flex flex-col items-center py-10 px-5 md:px-20">
         <h2 className="text-4xl font-extrabold text-gray-700 text-center mb-10">CONTACT US</h2>
 
         <div className="grid md:grid-cols-2 gap-8 w-full max-w-5xl">

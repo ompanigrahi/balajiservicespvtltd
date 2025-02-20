@@ -3,7 +3,7 @@ import Foter from "../components/footer";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-between min-h-screen bg-green-100 text-center">
+    <div className="flex flex-col mt-16 justify-between min-h-screen bg-green-100 text-center">
       {/* Title */}
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold py-8 text-green-900">
         ABOUT US
