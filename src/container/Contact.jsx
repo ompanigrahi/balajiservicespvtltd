@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import Footer from "../components/footer";
 
 const ContactUs = () => {
@@ -15,47 +16,57 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData); // Log form data to the console
-    
+    console.log("Form Data:", formData);
+
     const staticPart = "https://wa.me/8455975766?text=";
     const dynamicPart = `Name: ${formData.name} Phone No: ${formData.phone} Service Chosen: ${formData.service} Address: ${formData.address}`;
     const url = `${staticPart}${encodeURIComponent(dynamicPart)}`;
     
-    // Redirect to the constructed URL
     window.open(url, "_blank");
   };
 
   return (
     <>
+      {/* SEO Metadata */}
+      <Helmet>
+        <title>Contact Balaji Services - Get In Touch for Gardening & Cleaning</title>
+        <meta name="description" content="Contact Balaji Services for professional gardening, house cleaning, and landscaping. Call us now or fill out the form to get started!" />
+        <meta name="keywords" content="contact gardening services, landscaping, house cleaning, garden maintenance, tree trimming" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Contact Balaji Services - Get In Touch for Gardening & Cleaning" />
+        <meta property="og:description" content="Need expert gardening or cleaning services? Contact Balaji Services today!" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div className="min-h-screen lg:mt-16 bg-green-100 flex flex-col items-center py-10 px-5 md:px-20">
-        <h2 className="text-4xl font-extrabold text-gray-700 text-center mb-10">CONTACT US</h2>
+        <h1 className="text-4xl font-extrabold text-gray-700 text-center mb-10">Contact Us</h1>
 
         <div className="grid md:grid-cols-2 gap-8 w-full max-w-5xl">
           {/* Contact Info */}
           <div className="space-y-4 text-lg text-gray-700">
             <div>
-              <h3 className="font-bold">Phone No.</h3>
-              <p>📞 98474 67833</p>
+              <h2 className="font-bold">Phone No.</h2>
+              <a href="tel:+919847467833" className="text-green-600 hover:underline">+91 98474 67833</a>
             </div>
             <div>
-              <h3 className="font-bold">Email:</h3>
-              <p>📧 amarmanna867@gmail.com</p>
+              <h2 className="font-bold">Email:</h2>
+              <a href="mailto:amarmanna867@gmail.com" className="text-green-600 hover:underline">📧 amarmanna867@gmail.com</a>
             </div>
           </div>
 
           {/* Contact Form */}
           <form onSubmit={handleSubmit} className="bg-white p-6 shadow-lg rounded-lg w-full">
             <div className="mb-4">
-              <label className="block font-semibold">Your Name:</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required />
+              <label htmlFor="name" className="block font-semibold">Your Name:</label>
+              <input id="name" type="text" name="name" value={formData.name} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required />
             </div>
             <div className="mb-4">
-              <label className="block font-semibold">Phone No.:</label>
-              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required />
+              <label htmlFor="phone" className="block font-semibold">Phone No.:</label>
+              <input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required />
             </div>
             <div className="mb-4">
-              <label className="block font-semibold">Services Chosen:</label>
-              <select name="service" value={formData.service} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required>
+              <label htmlFor="service" className="block font-semibold">Services Chosen:</label>
+              <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required>
                 <option value="">Select a service</option>
                 <option value="Tree Cutting">Tree Cutting</option>
                 <option value="House Colouring">House Colouring</option>
@@ -66,8 +77,8 @@ const ContactUs = () => {
               </select>
             </div>
             <div className="mb-4">
-              <label className="block font-semibold">Address:</label>
-              <input type="text" name="address" value={formData.address} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required />
+              <label htmlFor="address" className="block font-semibold">Address:</label>
+              <input id="address" type="text" name="address" value={formData.address} onChange={handleChange} className="w-full p-2 border border-gray-300 rounded mt-1" required />
             </div>
             <button type="submit" className="w-full bg-green-600 text-white p-2 rounded hover:bg-green-700 transition">Submit</button>
           </form>
@@ -82,15 +93,16 @@ const ContactUs = () => {
             className="border-2 border-gray-300 rounded-lg"
             allowFullScreen=""
             loading="lazy"
+            title="Balaji Services Location"
           ></iframe>
         </div>
 
         {/* Address */}
         <div className="text-center text-lg font-semibold text-gray-700 mt-6">
           <p>
-            Balaji Services
-            <br /> Near EVM Volkswagen, Cochin
-            <br /> 682304
+            <strong>Balaji Services</strong> <br />
+            Near EVM Volkswagen, Cochin <br />
+            682304
           </p>
         </div>
       </div>
