@@ -33,9 +33,9 @@ function Home() {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      <div className="relative h-[75vh] md:h-screen flex justify-center items-center">
+      <div className="relative h-[90vh] md:h-screen flex justify-center items-center">
         <img
-          src="/images/garden-bg.jpg"
+          src="/images/hero.jpg"
           alt="Beautiful garden maintained by Balaji Services"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -45,19 +45,22 @@ function Home() {
             ref={Left}
             className="relative text-center p-10 rounded-lg mt-10 md:mt-20 lg:mt-32 w-full h-[80vh] flex flex-col justify-center items-center"
           >
-            <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-8xl font-bold uppercase text-white drop-shadow-lg">
-              Balaji <br /> Services
+            <h1 className="text-6xl sm:text-5xl md:text-6xl lg:text-[6rem] font-[400] uppercase text-white drop-shadow-lg">
+              Balaji Services
             </h1>
-            <h2 className="text-xl sm:text-lg md:text-2xl mt-4 text-gray-200">
+            <h2 className="text-xl sm:text-2xl md:text-5xl tracking-wide mt-4 text-gray-200">
               Five Star Garden Service Provider
             </h2>
-            <div className="mt-4 object-cover">
+            <div className="object-cover -translate-y-12 md:-translate-y-8">
               <img
                 src="/images/ratingstar.jpg"
                 alt="Five-star rating for Balaji Services"
                 className="mx-auto scale-125 sm:scale-100 lg:scale-150"
                 loading="lazy"
               />
+            </div>
+            <div>
+              <button  className="bg-[#28A31599] -translate-y-14 md:-translate-y-10 font-[Merriweather] text-white text-xl py-5 px-12 tracking-[.10rem] rounded-[50px]">Learn More</button>
             </div>
           </div>
         </div>
