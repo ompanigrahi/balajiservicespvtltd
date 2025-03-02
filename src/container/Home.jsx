@@ -60,7 +60,7 @@ function Home() {
               />
             </div>
             <div>
-              <button  className="bg-[#28A31599] -translate-y-14 md:-translate-y-10 font-[Merriweather] text-white text-xl py-5 px-12 tracking-[.10rem] rounded-[50px]">Learn More</button>
+              <button  className="bg-[#28A31599] hover:bg-[#75f16499] -translate-y-14 md:-translate-y-10 font-[Merriweather] text-white text-xl py-5 px-12 tracking-[.10rem] rounded-[50px]">Learn More</button>
             </div>
           </div>
         </div>

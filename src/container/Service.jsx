@@ -105,7 +105,7 @@ function Page2() {
           ))}
         </div>
       </div>
-      
+
       <Foter />
     </>
   );

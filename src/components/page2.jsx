@@ -70,11 +70,25 @@ function Page2() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex flex-col gap-10 bg-[#7d987d] pb-10">
+    <div className="h-auto w-full flex flex-col gap-10 bg-[#7d987d] pb-10">
       <h1 className="text-4xl md:text-5xl lg:text-7xl text-gray-100 font-bold text-center p-5 uppercase mt-20 drop-shadow-md">
         Our Services
       </h1>
+   <div className="h-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10 ">
+<div className="w-[400px] h-screen bg-white">
 
+</div>
+<div className="w-[400px] h-screen bg-white">
+
+</div>
+<div className="w-[400px] h-screen bg-white">
+
+</div>
+<div className="w-[400px] h-screen bg-white">
+
+</div>
+
+   </div>
 
 
     </div>
