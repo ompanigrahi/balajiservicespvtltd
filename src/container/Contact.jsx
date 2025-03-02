@@ -101,8 +101,7 @@ const ContactUs = () => {
         <div className="text-center text-lg font-semibold text-gray-700 mt-6">
           <p>
             <strong>Balaji Services</strong> <br />
-            Near EVM Volkswagen, Cochin <br />
-            682304
+            Vytila, Cochin, Kerala, India, 682304
           </p>
         </div>
       </div>
